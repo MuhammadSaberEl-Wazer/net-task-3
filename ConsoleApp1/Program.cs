@@ -53,6 +53,23 @@
             return repetation;
         }
 
+        static int[] ReverseArray(int[] sourceArr)
+        {
+            int newArrayLength = sourceArr.Length;
+            int[] numbers = new int[newArrayLength];
+
+            for (int i = 0; i < newArrayLength; i++)
+            {
+                int theNumber = sourceArr[newArrayLength - i - 1];
+                numbers[i] = theNumber;
+
+            }
+
+            
+            return numbers;
+        }
+
+
         static void Main(string[] args)
         {
             #region
@@ -118,19 +135,41 @@
             #endregion
 
             #region
-            int noOfOccToCheck, repetationCounter;
-            int[] arrayOfAll = { 1, 2, 3, 4, 5, 6, 7, 8, 9,5, 4, 1, 4, 2, 3, 4, 5, 6, 7, 8, 9, 4, 2, 4, 1, 8, 6, 5, 3, 9, 2, 5, 7, 3, 1, 5, 6, 7, 7, 9, 6, 9, 5, 3, 5, 6 };
-            Console.WriteLine("Hello sir, I've an array you show it and if you wanna check ocuurance of a number in it please type the number...");
-            for (int j = 0; j < arrayOfAll.Length; j++)
+            //int noOfOccToCheck, repetationCounter;
+            //int[] arrayOfAll = { 1, 2, 3, 4, 5, 6, 7, 8, 9,5, 4, 1, 4, 2, 3, 4, 5, 6, 7, 8, 9, 4, 2, 4, 1, 8, 6, 5, 3, 9, 2, 5, 7, 3, 1, 5, 6, 7, 7, 9, 6, 9, 5, 3, 5, 6 };
+            //Console.WriteLine("Hello sir, I've an array you show it and if you wanna check ocuurance of a number in it please type the number...");
+            //for (int j = 0; j < arrayOfAll.Length; j++)
+            //{
+            //    Console.WriteLine(arrayOfAll[j]);
+            //}
+            //Console.WriteLine("Which number you wanna check please?");
+            //noOfOccToCheck = Convert.ToInt32 (Console.ReadLine());
+
+            //repetationCounter = GetOccurance(arrayOfAll, noOfOccToCheck);
+
+            //Console.WriteLine($"Occurance of number you wrote is/are {repetationCounter} time/times, Thank you ^_^");
+            #endregion
+
+
+            #region
+            //Task 3
+
+            int[] sourceArray = { 5, 4, 3, 2, 1, 0 , -1,-2};
+            Console.WriteLine("Old numbers are..");
+            for (int i = 0; i < sourceArray.Length; i++)
             {
-                Console.WriteLine(arrayOfAll[j]);
+                Console.WriteLine(sourceArray[i]);
             }
-            Console.WriteLine("Which number you wanna check please?");
-            noOfOccToCheck = Convert.ToInt32 (Console.ReadLine());
+            int[] newArray = ReverseArray(sourceArray);
+            Console.WriteLine("--------- REVERSING ----------");
+            Console.WriteLine("New numbers are..");
+            for (int i = 0; i < newArray.Length; i++)
+            {
+                Console.WriteLine(newArray[i]);
+            }
 
-            repetationCounter = GetOccurance(arrayOfAll, noOfOccToCheck);
 
-            Console.WriteLine($"Occurance of number you wrote is/are {repetationCounter} time/times, Thank you ^_^");
+
             #endregion
         }
 
