@@ -12,3 +12,4 @@ D:\Courses\.NET\Sessions\Session 4\Task\ConsoleApp1\ConsoleApp1\obj\Debug\net8.0
 D:\Courses\.NET\Sessions\Session 4\Task\ConsoleApp1\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.pdb
 D:\Courses\.NET\Sessions\Session 4\Task\ConsoleApp1\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.genruntimeconfig.cache
 D:\Courses\.NET\Sessions\Session 4\Task\ConsoleApp1\ConsoleApp1\obj\Debug\net8.0\ref\ConsoleApp1.dll
+D:\Courses\.NET\Sessions\Session 4\Task\ConsoleApp1\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.sourcelink.json
