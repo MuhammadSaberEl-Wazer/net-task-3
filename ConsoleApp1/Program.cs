@@ -23,10 +23,10 @@
         {
             return (double)no1 / no2;
         }
-         
+
         static bool checkValidSign(string theSign)
         {
-            if(theSign == "+" || theSign == "-" || theSign == "*" || theSign == "/")
+            if (theSign == "+" || theSign == "-" || theSign == "*" || theSign == "/")
             {
                 return true;
             }
@@ -45,7 +45,7 @@
             {
                 for (int i = 0; i < arr.Length; i++)
                 {
-                if(arr[i] == occNumberChecker) { repetation++; }
+                    if (arr[i] == occNumberChecker) { repetation++; }
                 }
 
             }
@@ -65,8 +65,53 @@
 
             }
 
-            
+
             return numbers;
+        }
+
+
+        static int[] RemoveRepetitionArray(int[] sourceArr)
+        {
+            int newArrayLength = sourceArr.Length;
+            int[] newArr = new int[newArrayLength];
+
+            for (int i = 0; i < newArrayLength; i++)
+            {
+                if (i == 0)
+                {
+                    newArr[0] = sourceArr[0];
+                }
+                else
+                {
+                    bool existanceFlag = false;
+                    for (int j = 0; j < i; j++)
+                    {
+                        if (newArr[j] == sourceArr[i])
+                        {
+                            existanceFlag = true;
+                            break;
+
+                        }
+
+                    }
+
+                    if (!existanceFlag)
+                    {
+                        newArr[i] = sourceArr[i];
+                    }
+                }
+
+            }
+
+            
+
+
+
+
+            return newArr;
+
+
+
         }
 
 
@@ -154,23 +199,42 @@
             #region
             //Task 3
 
-            int[] sourceArray = { 5, 4, 3, 2, 1, 0 , -1,-2};
-            Console.WriteLine("Old numbers are..");
-            for (int i = 0; i < sourceArray.Length; i++)
+            //int[] sourceArray = { 5, 4, 3, 2, 1, 0 , -1,-2};
+            //Console.WriteLine("Old numbers are..");
+            //for (int i = 0; i < sourceArray.Length; i++)
+            //{
+            //    Console.WriteLine(sourceArray[i]);
+            //}
+            //int[] newArray = ReverseArray(sourceArray);
+            //Console.WriteLine("--------- REVERSING ----------");
+            //Console.WriteLine("New numbers are..");
+            //for (int i = 0; i < newArray.Length; i++)
+            //{
+            //    Console.WriteLine(newArray[i]);
+            //}
+
+            #endregion
+
+            #region 
+
+            int[] testArray = { 1, 2, 1, 1, 5, 6, 8, 9, 3, 5, 6, 7, 8, 3, 2, 3, 1, 5 }; // We don't use 0
+
+            int[] newArr = RemoveRepetitionArray(testArray);
+
+            for (int i = 0; i < newArr.Length; i++)
             {
-                Console.WriteLine(sourceArray[i]);
-            }
-            int[] newArray = ReverseArray(sourceArray);
-            Console.WriteLine("--------- REVERSING ----------");
-            Console.WriteLine("New numbers are..");
-            for (int i = 0; i < newArray.Length; i++)
-            {
-                Console.WriteLine(newArray[i]);
+                if (newArr[i] != 0)
+                {
+                    Console.WriteLine(newArr[i]);
+                }
+
             }
 
 
 
             #endregion
+
+
         }
 
     }
